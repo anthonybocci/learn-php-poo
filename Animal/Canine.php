@@ -10,7 +10,7 @@ namespace Animal;
  *
  * @author Anthony Bocci
  */
-abstract class Canine extends Animal {
+abstract class Canine extends Animal implements \Interfaces\TransformableInterface {
     
     public function eat() {
         echo "I eat ham";
@@ -19,5 +19,17 @@ abstract class Canine extends Animal {
     abstract public function move();
     
     abstract public function sound();
+
+    /**
+     * Method from TransformableInterface
+     * An abstract class can have abstract and non-abstract methods
+     */
+    public function transform() {
+        echo "I am transforming to monster";
+    }
+
+    public function untransform() {
+        echo "I am transforming back to myself";
+    }
 
 }

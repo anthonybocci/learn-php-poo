@@ -46,6 +46,12 @@ namespace Animal;
 abstract class Animal {
 
     /**
+     * Animal (and its subclasses) uses methods from TimeTrait, so every class
+     * can use these methods
+     */
+    use \Traits\TimeTrait;
+    
+    /**
      * A fields and functons have visibility.
      * private: the field/function is only visible from the object. It is not
      * visible from outside neither from class that inherit from this class.
