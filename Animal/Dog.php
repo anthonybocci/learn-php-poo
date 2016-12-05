@@ -23,8 +23,8 @@ class Dog extends Canine {
          * Use the Canine#eat method, so it is possible to override a method 
          * without loose the existing definition
          */
-        parent.eat();
-       echo "I eat cats"; 
+        parent::eat();
+        echo "I eat cats"; 
     }
 
     public function move() {
